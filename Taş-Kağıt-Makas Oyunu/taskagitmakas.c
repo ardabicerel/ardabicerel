@@ -35,6 +35,9 @@ int main() {
 		
 			srand(time(NULL));
 			bilgisayar_secim = rand() % 3; //0,1,2 sayýlarý arasýnda sayý oluþturur.
+			
+			printf("\n-----------------------------------\n");
+
 		
 			switch(oyuncu_secim)
 			{
@@ -90,16 +93,19 @@ int main() {
 		if(bilgisayar_puan > oyuncu_puan)
 		{
 			printf("\n\n***Bilgisayar kazandi***\n");
+			printf("\n-----------------------------------\n\n");
 		}
 	
 		else if(oyuncu_puan > bilgisayar_puan)
 		{
 			printf("\n\n***Oyuncu1 oyunu kazandi***\n");
+			printf("\n-----------------------------------\n\n");
 		}
 	
 		else if(oyuncu_puan == bilgisayar_puan)
 		{
-			printf("\n\nBu oyunlar sonucunda kazanan olmadi.\n");
+			printf("\n\nBu oyunlar sonucunda kazanan olmadi.\n\n");
+			printf("-----------------------------------\n\n");
 		}
 	}
 	
@@ -120,6 +126,8 @@ int main() {
 			srand(time(NULL));
 			bilgisayar_secim = rand() % 3; //0,1,2 sayýlarý arasýnda sayý oluþturur.
 		
+			printf("\n-----------------------------------\n");
+			
 			switch(oyuncu_secim)
 			{
 			case 0:
@@ -132,10 +140,6 @@ int main() {
 	
 			case 2:
 				printf("\nScissors-");
-				break;
-		
-			default:
-				printf("\nWrong value has been entered. The game is finished.\n\n");
 				break;
 			}
 		
@@ -174,26 +178,32 @@ int main() {
 		if(bilgisayar_puan > oyuncu_puan)
 		{
 			printf("\n\n***Computer won the game.***\n");
+			printf("\n-----------------------------------\n\n");
 		}
 	
 		else if(oyuncu_puan > bilgisayar_puan)
 		{
 			printf("\n\n***Player1 won the game.***\n");
+			printf("\n-----------------------------------\n\n");
 		}
 	
 		else if(oyuncu_puan == bilgisayar_puan)
 		{
 			printf("\n\nAt the end of the rounds, there is no winner.\n");
+			printf("\n-----------------------------------\n\n");
 		}
 	}
 	
 	else
 	{
 		printf("-----------------------------------\n\n");
-		printf("Wrong choice. The game is finished.");
-		printf("\n\n-----------------------------------");
-		exit(1);
+		printf("Turkish : Yanlis secim. Oyun bitirildi.\n");
+		printf("English : Wrong choice. The game is finished.");
+		printf("\n\n-----------------------------------\n\n");
 	}
+	
+	printf("Turkish : Cikmak icin 1 yaziniz.\nEnglish : Type 1 to exit.\n");
+	scanf("%[\n]");
 	
     return 0;
 }
