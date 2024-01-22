@@ -3,7 +3,7 @@
 #include <time.h>
 
 int main() {
-	
+	a
 	int oyuncu_secim;
 	int bilgisayar_secim;
 	int bilgisayar_puan=0; 
